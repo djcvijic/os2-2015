@@ -29,7 +29,7 @@ ostream& operator<<(ostream &os,const Entry &E){
 	return os<<name<<" ["<<E.size<<']';
 }
 
-int main(){
+/*int main(){
 	clock_t startTime,endTime;
 	cout<<"Pocetak testa!"<<endl;
 	startTime=clock();//pocni merenje vremena
@@ -67,4 +67,4 @@ int main(){
 	CloseHandle(nit2);
 	CloseHandle(nit3);
 	return 0;
-}
+}*/

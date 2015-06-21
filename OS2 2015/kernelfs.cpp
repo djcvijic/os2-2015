@@ -132,10 +132,8 @@ void KernelFS::deleteFile(char* fname) {
 
 void KernelFS::readDir(char* dirname, EntryNum n, Entry &e) {
 	char result = 1;
-	Path *dirPath = new Path(dirname);
 	Directory *containingDir = findContainingDirectory(dirname, true);
 	e = containingDir->getEntry(n);
-	delete dirPath;
 	delete containingDir;
 }
 

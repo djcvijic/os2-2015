@@ -2,7 +2,7 @@
 
 class Path {
 public:
-	Path(char* path);
+	Path(char* path, char part = '\0');
 	bool isAbsolute();
 	bool isBaseName();
 	bool hasPartition();
@@ -11,16 +11,16 @@ public:
 	char* getBaseName();
 	char* getBaseNameWOExtension();
 	char* getExtension();
-	Path* getContainingDirectory();
+	Path* getContainingDirectoryPath();
 	char* getTopLevelDirectory();
 	Path* getNextLevelPath();
 	~Path();
 private:
 	char partition;
 	char *pathString;
-	char *containingDirectory;
-	char *baseNameWOExtension;
-	char *topLevelDirectory;
+	char *containingDirectory = 0;
+	char *baseNameWOExtension = 0;
+	char *topLevelDirectory = 0;
 
 	void generateContainingDirectory();
 	void generateBaseNameWOExtension();
