@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cstring>
+
 class Path {
 public:
 	Path(char* path, char part = '\0');
@@ -18,9 +20,9 @@ public:
 private:
 	char partition;
 	char *pathString;
-	char *containingDirectory = 0;
-	char *baseNameWOExtension = 0;
-	char *topLevelDirectory = 0;
+	char *containingDirectory = NULL;
+	char *baseNameWOExtension = NULL;
+	char *topLevelDirectory = NULL;
 
 	void generateContainingDirectory();
 	void generateBaseNameWOExtension();

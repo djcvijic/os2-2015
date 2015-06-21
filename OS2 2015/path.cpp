@@ -1,6 +1,5 @@
 #include "path.h"
 #include <cstring>
-#include <cstdio>
 
 Path::Path(char* path, char part) {
 	partition = part;
